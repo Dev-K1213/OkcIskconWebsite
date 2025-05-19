@@ -506,7 +506,7 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-image: url('../images/edward-unsplash-blur.jpg');
+  background-image: url('../images/image.png');
   background-color: #704010;
   background-repeat: no-repeat;
   background-size: cover;
@@ -586,65 +586,85 @@ strong {
 /*---------------------------------------
   ARTISTS              
 -----------------------------------------*/
-.artists-thumb {
+.announcements-section {
+  background-image: url('../images/annoucementblur.jpg');
+  background-color: #704010;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-  overflow: hidden;
-  margin-bottom: 30px;
 }
 
-.artists-image {
-  border-radius: var(--border-radius-medium);
-  display: block;
-  width: 100%;
+.announcements-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
 }
 
-.artists-thumb:hover .artists-hover {
-  transform: translateY(0);
-  opacity: 1;
+.announcement-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;
+  max-height: 100%;
+  transition: transform 0.2s;
+}
+.announcement-card:hover {
+  transform: translateY(-5px);
 }
 
-.artists-hover {
-  background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
-  border-radius: var(--border-radius-medium);
-  backdrop-filter: blur(5px) saturate(180%);
-  -webkit-backdrop-filter: blur(5px) saturate(180%);
-  margin: 20px;
-  padding: 35px;
-  transition: all 0.5s ease;
-  transform: translateY(100%);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 0;
+.announcement-card h5 {
+  color: #004080; /* Headline */
 }
 
-.artists-hover p strong {
-  color: var(--white-color);
-  display: inline-block;
-  min-width: 180px;
-  margin-right: 20px;
+.announcement-card p {
+  color: #333333; /* Body text */
 }
 
-.artists-hover p a {
-  color: var(--secondary-color);
+.btn-primary {
+  background-color: #ff6600; /* Bright orange */
+  border-color: #ff6600;
+  color: white;
 }
 
-.artists-hover p a:hover {
-  color: var(--white-color);
+.btn-primary:hover {
+  background-color: #e65c00;
+  border-color: #e65c00;
 }
 
-.artists-hover hr {
-  margin: 1.5rem 0;
+.announcement-card {
+  background-color: #fcefc7; /* Light yellow */
+  color: #333; /* Text color inside the card */
 }
+.announcement-card h5 {
+  color: #d97706; /* Orange-brown */
+}
+.announcements-scroll::-webkit-scrollbar {
+  height: 12px; /* Thickness */
+}
+
+.announcements-scroll::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track color */
+  border-radius: 10px;
+}
+
+.announcements-scroll::-webkit-scrollbar-thumb {
+  background: #d97706; /* Thumb (slider) color */
+  border-radius: 10px;
+}
+
+.announcements-scroll::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
 
 
 /*---------------------------------------
   SCHEDULE              
 -----------------------------------------*/
 .schedule-section {
-  background-image: url('../images/nainoa-shizuru-unsplash-blur.jpg');
+  background-image: url('../images/Eventbackground.jpg');
   background-color: #242424;
   background-repeat: no-repeat;
   background-position: center;
@@ -719,6 +739,11 @@ strong {
   position: relative;
   z-index: 2;
 }
+
+.calendar-embed {
+  margin-top: 40px;
+}
+
 
 
 /*---------------------------------------
